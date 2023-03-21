@@ -1,0 +1,87 @@
+@use "../../../mixins" as *;
+@use "../../../presets" as *;
+
+.comment-author {
+  display: grid;
+  align-items: center;
+  grid-template-areas: "ttx img" "nam img" "log img";
+  column-gap: 80px;
+
+  @include xl {
+    text-align: center;
+    align-items: center;
+    justify-items: center
+  }
+
+  &__text {
+    max-width: 920px;
+    grid-area: ttx;
+    font-size: 30px;
+    line-height: 1.33;
+    padding-top: 18px;
+    padding-bottom: 25px;
+    margin: 0;
+
+    @include xl {
+      max-width: 650px;
+    }
+
+    @include lg {
+      max-width: 552px;
+    }
+
+    @include sm {
+      font-size: 22px;
+      max-width: 450px;
+    }
+
+    @include xs {
+      max-width: 350px;
+    }
+
+    @include xx {
+      max-width: 300px;
+    }
+
+    @include ux {
+      max-width: 245px;
+    }
+  }
+
+  &__name {
+    grid-area: nam;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    padding-bottom: 8px;
+
+    @include lg {
+      padding-top: 0px;
+    }
+  }
+
+  &__logo {
+    grid-area: log;
+    padding-bottom: 55px;
+  }
+
+  &__image {
+    grid-area: img;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 312px;
+    padding-top: 9px;
+  }
+
+  &__photo {
+    width: 100%;
+  }
+
+  @include lg {
+    grid-template-areas: "ttx" "img" "nam" "log";
+    gap: $gap;
+    justify-content: center;
+  }
+}

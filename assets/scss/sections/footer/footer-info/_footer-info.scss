@@ -1,0 +1,26 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.footer-info {
+  display: grid;
+  justify-content: space-between;
+  padding-bottom: 95px;
+  border-bottom: 1px solid $color-primary;
+  gap: $gap;
+  grid-template-areas: "std prd spt cmp lgl";
+
+  @include lg {
+    grid-template-areas: "std prd spt" "std cmp lgl";
+  }
+
+  @include md {
+    justify-content: center;
+    row-gap: 50px;
+    grid-template-areas: "std std" "prd spt" "cmp lgl";
+  }
+
+  @include xx {
+    row-gap: 40px;
+    column-gap: 30px;
+  }
+}

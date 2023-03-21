@@ -1,0 +1,7 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.footer {
+  padding-top: 87px;
+  background-color: $color-gray-light;
+}

@@ -1,0 +1,35 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.procuring-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+
+
+  &__title {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 1.4;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: 1.39;
+    margin: 0;
+    max-width: 330px;
+
+    @include xs {
+      max-width: 300px;
+    }
+  }
+
+  &__picture {
+    order: -1;
+  }
+}
